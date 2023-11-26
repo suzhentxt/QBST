@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <title>AquaEmi - Details</title>
+        <title>QBST - Nước</title>
         <meta name = "description" content = "[Description about AquaEmi]">
         <link rel = "stylesheet" href = "../static/water.css">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
