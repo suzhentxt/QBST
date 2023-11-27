@@ -9,14 +9,14 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="header">
+        <!-- <div id="header">
             <h1> Water Monitoring </h1>
         </div>
             <div id="menu">
             <ul>
                 
             </ul>
-        </div>
+        </div> -->
         <div id="main-content">
           <h2>Water Quality</h2>
             
