@@ -8,9 +8,41 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="wrapper">
+        <div id="header">
+            <h1> Water Monitoring </h1>
+        </div>
+            <div id="menu">
+            <ul>
+                
+            </ul>
+        </div>
+        <div id="main-content">
+          <h2>Water Quality</h2>
+            
+        </div>
+    </div>
+  
+  <script>
+    document.getElementById("wqivalue").innerHTML = 100;
+    function loadXMLDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("main-content").innerHTML =
+          this.responseText;
+        }
+      };
+      xhttp.open("GET", "server.php", true);
+      xhttp.send();
+    }
+    setInterval(function() {
+      loadXMLDoc();
+    }, 5000);
 
-            <?php
-              include '../water.php';
-            ?>
+    // window.onload = loadXMLDoc;
+
+  </script>
+
 </body>
 </html>

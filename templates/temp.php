@@ -95,6 +95,7 @@
                     <p style = "font-size: 2.5vw; font-weight: bold;">Chất lượng nước của Động Phong Nha</p>
                     <p style = "font-size: 1vw; margin-top: -2.2vw;">Water Quality Index (WQI) ở Động Phong Nha, Bố Trạch, Quảng Bình</p>
                     <div class = "headings_others" id = "headings_others">
+                        <p style = "font-size: 0.8vw; font-weight: bold;">Last updated at 9:22 pm August 5 (local time)</p>
                         <div class = "followers" id = "followers">
                             <p style = "font-size: 0.8vw;"><mark style = "background-color: #fff; font-weight: bold;"> 3,12N </mark> người theo dõi hang động này</p>
                             <img src = "../static/images/people.png" style = "width: 6.5vw; height: 1.8vw; margin: 0.3vw 0 0 1vw;">
@@ -120,28 +121,28 @@
                                     <img src="../static/images/good.png" style="width: 12vw; height: 11vw;">
                                 </div>
                                 <div class="waterquality" id="waterquality">   
-                                    <p style="font-size: 6vw; color: #3E821F; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
+                                    <p style="font-size: 6vw; color: #3E821F; margin: 0.5vw 0 0 0"><span id="ph-value"></span></p>
                                     <p style="font-size: 1.3vw; color: #3E821F; margin: -0.5vw 0 0 2vw; font-weight: bold;">WQI</p>
                                 </div>
                                 <div class="quality_information" id="quality_information_good">
                                     <p style="font-size: 4.5vw; color: #3E821F; margin: 1vw 0 0 3vw; font-weight: bold;">GOOD</p>
                                     <p style="font-size: 1.5vw; color: #3E821F; margin: 0 0 1vw 0;">Healthy for fish and people</p>
-                                    <!-- <div class="quality_information_others" id="quality_information_others">pH, nồng độ oxy tan, chất ô nhiễm</div> -->
-                                    <!-- <div class="quality_information_others" id="quality_information_others">7, 6, 5</div> -->
+                                    <div class="quality_information_others" id="quality_information_others">pH, nồng độ oxy tan, chất ô nhiễm</div>
+                                    <div class="quality_information_others" id="quality_information_others">7, 6, 5</div>
                                 </div>
                             </div>
                             <div class="others" id="others">
-                                <div class="temperature" id = "ph">
+                                <div class="temperature" id="temperature">
                                     <img src="../static/images/temperature4.png" style="width: 4vw; height: 4vw;">
                                     <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
                                 </div>
-                                <div class="wind" id = "streamflow">
+                                <div class="wind" id="wind">
                                     <img src="../static/images/wind3.png" style="width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
+                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;">5 ml/s </p>
                                 </div>
-                                <div class="wet" id = "tds">
+                                <div class="wet" id="wet">
                                     <img src="../static/images/wet2.png" style="width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm</p>
+                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;">7 ppm</p>
                                 </div>
                             </div>
                         </div>
@@ -153,27 +154,27 @@
                                     <img src = "../static/images/moderate.png" style = "width: 12vw; height: 11vw;">
                                 </div>
                                 <div class = "waterquality" id = "waterquality">
-                                    <p style = "font-size: 6vw; color: #ff6600; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
+                                    <p style = "font-size: 6vw; color: #ff6600; margin: 0.5vw 0 0 0"><span id="ph-value"></span> pH</p>
                                     <p style = "font-size: 1.3vw; color: #ff6600; margin: -0.5vw 0 0 2vw; font-weight: bold;">WQI</p>
                                 </div>
                                 <div class = "quality_information" id = "quality_information_moderate" style="background-color: #fcb07e;">
                                     <p style = "font-size: 4.5vw; color: #ff6600; margin: 1vw 0 0 -1vw; font-weight: bold;">MODERATE</p>
                                     <p style = "font-size: 1.5vw; color: #ff6600; margin: 0 0 1vw 0;">Unhealthy for sensitive groups of fish and people</p>
-                                    <!-- <div class = "quality_information_others" id = "quality_information_others">pH, nồng độ oxy tan, chất ô nhiễm</div> -->
+                                    <div class = "quality_information_others" id = "quality_information_others">pH, nồng độ oxy tan, chất ô nhiễm</div>
                                 </div>
                             </div>
                             <div class = "others" id = "others">
-                                <div class = "temperature" id = "ph">
+                                <div class = "temperature" id = "temperature">
                                     <img src = "../static/images/temperature5.png" style = "width: 4vw; height: 4vw;">
-                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
+                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw"><?= $ph ?> pH </p>
                                 </div>
-                                <div class = "wind" id = "streamflow">
+                                <div class = "wind" id = "wind">
                                     <img src = "../static/images/wind4.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
+                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.7vw;"><?= $streamflow ?> ml/s </p>
                                 </div>
-                                <div class = "wet" id = "tds">
+                                <div class = "wet" id = "wet">
                                     <img src = "../static/images/wet4.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm</p>
+                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;"><?= $tds ?> ppm</p>
                                 </div>
                             </div>
                         </div>
@@ -185,31 +186,32 @@
                                     <img src = "../static/images/alarm.png" style = "width: 12vw; height: 11vw;">
                                 </div>
                                 <div class = "waterquality" id = "waterquality">
-                                    <p style = "font-size: 6vw; color: #BD0000; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
+                                    <p style = "font-size: 6vw; color: #BD0000; margin: 0.5vw 0 0 0"><span id="ph-value"></span> pH/p>
                                     <p style = "font-size: 1.3vw; color: #BD0000; margin: -0.5vw 0 0 2vw; font-weight: bold;">WQI</p>
                                 </div>
                                 <div class = "quality_information" id = "quality_information_alarm" style="background-color: rgba(256, 132, 132, 0);">
                                     <p style = "font-size: 4.5vw; color: #BD0000; margin: 1vw 0 0 1vw; font-weight: bold;">ALARM</p>
                                     <p style = "font-size: 1.5vw; color: #BD0000; margin: 0 0 1vw 0;">Unhealthy for fish and people</p>
-                                    <!-- <div class = "quality_information_others" id = "quality_information_others">pH, nồng độ oxy tan, chất ô nhiễm</div> -->
+                                    <div class = "quality_information_others" id = "quality_information_others">pH, nồng độ oxy tan, chất ô nhiễm</div>
                                 </div>
                             </div>
                             <div class = "others" id = "others">
-                                <div class = "temperature" id = "ph">
+                                <div class = "temperature" id = "temperature">
                                     <img src = "../static/images/temperature.png" style = "width: 4vw; height: 4vw;">
-                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
+                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw"><?= $ph ?> pH </p>
                                 </div>
-                                <div class = "wind" id = "streamflow">
+                                <div class = "wind" id = "wind">
                                     <img src = "../static/images/wind.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
+                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;"><?= $streamflow ?> ml/s </p>
                                 </div>
-                                <div class = "wet" id = "tds">
+                                <div class = "wet" id = "wet">
                                     <img src = "../static/images/wet3.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm </p>
+                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;"><?= $tds ?> ppm</p>
                                 </div>
                             </div>
                         </div>
 
+                        <p style = "font-size: 1vw; margin: 2vw 0 0 27vw;">Last updated 10:06</p>
                         <div class = "data_provided" id = "data_provided">
                             <img src = "../static/images/logo.png" style = "width: 11vw; height: 4.5vw; margin: 0.5vw 1vw 0 0.5vw;">
                             <div class = "text" id = "text">
@@ -220,11 +222,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- <p style = "font-size: 1.2vw; font-weight: bolder; font-family: 'Noto Sans', sans-serif; margin: 1vw 0 0 2.5vw; color: #3E4784;">Chất lượng nước hiện tại</p>
+                <p style = "font-size: 1.2vw; font-weight: bolder; font-family: 'Noto Sans', sans-serif; margin: 1vw 0 0 2.5vw; color: #3E4784;">Chất lượng nước hiện tại</p>
                 <div class = "current_quality" id = "water_quality">
                     <div class = "level" id = "level">
                         <p style = "font-weight: bold;">Water pollution level</p>
-                            if ($wqi <= 100) {
+                            <!-- if ($wqi <= 100) {
                                 <p>Good</p>
                             }
                             elseif ($wqi <= 200) {
@@ -232,7 +234,7 @@
                             }
                             else {
                                 <p>Alarm</p>
-                            }
+                            } -->
                     </div>
                     <div class = "index" id = "index">
                         <p style = "font-weight: bold;">Water pollution index</p>
@@ -242,7 +244,7 @@
                         <p style = "font-weight: bold;">[pH, nồng độ oxy tan, chất ô nhiễm]</p>
                         <p>[{{data.ph}}, {{data.DO}} ppm, {{data.turbidity}} NTU]</p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </section>
         
@@ -301,23 +303,23 @@
                     document.getElementById('sf-value').innerHTML = data[data.length-1].streamflow;
                     document.getElementById('tds-value').innerHTML = data[data.length-1].tds;
 
-                    // console.log('wqi: ', data[0].wqi);
+                    console.log('wqi: ', data[0].wqi);
 
                     if (data[data.length-1].wqi <= 100) {
                         document.getElementById('information_box1').style.display = 'block';
                         document.getElementById('information_box2').style.display = 'none';
                         document.getElementById('information_box3').style.display = 'none';
                     } 
-                    else if (data[data.length-1].wqi <= 200) {
-                        document.getElementById('information_box1').style.display = 'none';
-                        document.getElementById('information_box2').style.display = 'block';
-                        document.getElementById('information_box3').style.display = 'none';
-                    } 
-                    else {
-                        document.getElementById('information_box1').style.display = 'none';
-                        document.getElementById('information_box2').style.display = 'none';
-                        document.getElementById('information_box3').style.display = 'block';
-                    }
+                    // else if (data[data.length-1].wqi <= 200) {
+                    //     document.getElementById('information_box1').style.display = 'none';
+                    //     document.getElementById('information_box2').style.display = 'block';
+                    //     document.getElementById('information_box3').style.display = 'none';
+                    // } 
+                    // else {
+                    //     document.getElementById('information_box1').style.display = 'none';
+                    //     document.getElementById('information_box2').style.display = 'none';
+                    //     document.getElementById('information_box3').style.display = 'block';
+                    // }
                 })
                 .catch(error => {
                     // Xử lý lỗi nếu có

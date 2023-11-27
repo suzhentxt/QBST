@@ -155,15 +155,15 @@ body {
 .information .others {
     display: flex;
 }
-.information .others .temperature {
+.information .others .ph {
     display: flex;
     margin-left: 4vw;
 }
-.information .others .wind {
+.information .others .streamflow {
     display: flex;
     margin-left: 18vw;
 }
-.information .others .wet {
+.information .others .tds {
     display: flex;
     margin-left: 15vw;
 }

@@ -11,4 +11,4 @@ function fetchData() {
 }
 
 // Tự động làm mới mỗi giây
-setInterval(fetchData, 1000);
+// setInterval(fetchData, 1000);
