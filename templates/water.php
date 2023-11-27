@@ -8,6 +8,7 @@
         <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
 
         <script>
             $(document).ready(function() {
@@ -87,17 +88,17 @@
             <div class = "content" id = "content">
                 <div class = "destination" id = "destination">
                     <img src="../static/images/location.png" style = "width: 1.3vw; height: 1.5vw; margin-top: -0.15vw">
-                    <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#01a26d"> {{ data.country }} </p>
+                    <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#3E4784"> Bố Trạch </p>
                     <img src="../static/images/more.png" style = "width: 1vw; height: 1.3vw;">
-                    <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#01a26d">{{ rivername }}</p>
+                    <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#3E4784">Động Phong Nha</p>
                 </div>
                 <div class = "headings" id = "headings">
-                    <p style = "font-size: 2.5vw; font-weight: bold;">Water quality in {{ rivername }}</p>
-                    <p style = "font-size: 1vw; margin-top: -2.2vw;">Water quality index (WQI) and weather forecast in {{ rivername }}, {{ data.name }}</p>
+                    <p style = "font-size: 2.5vw; font-weight: bold;">Chất lượng nước của Động Phong Nha</p>
+                    <p style = "font-size: 1vw; margin-top: -2.2vw;">Water Quality Index (WQI) ở Động Phong Nha, Bố Trạch, Quảng Bình</p>
                     <div class = "headings_others" id = "headings_others">
-                        <p style = "font-size: 0.8vw; font-weight: bold;">Last updated at 9:22pm August 5 (local time)</p>
+                        <p style = "font-size: 0.8vw; font-weight: bold;">Last updated at 9:22 pm August 5 (local time)</p>
                         <div class = "followers" id = "followers">
-                            <p style = "font-size: 0.8vw;"><mark style = "background-color: #fff; font-weight: bold;"> {{ data.followers }} </mark> people follow this city</p>
+                            <p style = "font-size: 0.8vw;"><mark style = "background-color: #fff; font-weight: bold;"> 3,12N </mark> người theo dõi hang động này</p>
                             <img src = "../static/images/people.png" style = "width: 6.5vw; height: 1.8vw; margin: 0.3vw 0 0 1vw;">
                             <img src = "../static/images/heart2.png" style = "width: 2vw; height: 2.1vw; margin: 0.3vw 0 0 0.5vw;">
                             <img src = "../static/images/share.png" style = "width: 2.1vw; height: 2.2vw; margin: 0.3vw 0 0 0.5vw;">
@@ -107,7 +108,7 @@
                 <div class = "general" id = "general">
                     <div class = "map" id = "map">
                         <img src = "../static/images/map2.png" style = "width: 25vw; height: 30vw; border-radius: 1vw;">
-                        <p style = "font-size: 1.3vw; color: #fff; margin: -6vw 0 0 1vw; font-weight: bold;">{{ rivername }} Water Pollution Map</p>
+                        <p style = "font-size: 1.3vw; color: #fff; margin: -6vw 0 0 1vw; font-weight: bold;">Bản đồ nguồn nước Động Phong Nha</p>
                         <button class = "view_map" id = "view_map" onclick="location.href='map';">VIEW MAP</button>
                     </div>
                     <div class = "information" id = "information">
@@ -223,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <p style = "font-size: 1.2vw; font-weight: bolder; font-family: 'Noto Sans', sans-serif; margin: 1vw 0 0 2.5vw; color: #00A66E;">Current water quality</p>
+                <p style = "font-size: 1.2vw; font-weight: bolder; font-family: 'Noto Sans', sans-serif; margin: 1vw 0 0 2.5vw; color: #3E4784;">Chất lượng nước hiện tại</p>
                 <div class = "current_quality" id = "water_quality">
                     <div class = "level" id = "level">
                         <p style = "font-weight: bold;">Water pollution level</p>
@@ -243,44 +244,6 @@
                         <p style = "font-weight: bold;">[pH, nồng độ oxy tan, chất ô nhiễm]</p>
                         <p>[{{data.ph}}, {{data.DO}} ppm, {{data.turbidity}} NTU]</p>
                     </div>
-                </div>
-                <p style = "font-size: 1.2vw; font-weight: bolder; font-family: 'Noto Sans', sans-serif; margin: 3vw 0 0 2.5vw; color: #00A66E">WQI forecast</p>
-                <div class = "forecast" id = "forecast">
-                    <div class = "forecast_info" id = "forecast_info">
-                        <p>Day</p>
-                        <p style = "margin-left: 12vw;">Pollution level</p>
-                        <p style = "margin-left: 35vw;">Temperature</p>
-                        <p style = "margin-left: 10vw;">pH</p>
-                        <p style = "margin-left: 10vw;">Turbidity</p>
-                    </div>
-                    {% for prediction in predictions %}
-                    <div class = "forecast_box" id = "forecast_box">
-                        <p>{{prediction.date}}</p>
-                        {% if prediction.quality <= 100 %}
-                        <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #A8E05F; color: #3E821F;">
-                            <p>Good</p>
-                            <p style = "margin-left: 29vw;"><mark style = "background-color: #A8E05F; font-weight: bold; color: #3E821F;">{{prediction.quality}}</mark> WQI</p>
-                            <img src = "../static/images/good2.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
-                        </div>
-                        {% elif prediction.quality <= 200 %}
-                        <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #F6956C; color: #ff6600;">
-                            <p>Moderate</p>
-                            <p style = "margin-left: 29vw;"><mark style = "background-color: #F6956C; font-weight: bold; color: #ff6600;">{{prediction.quality}}</mark> WQI</p>
-                            <img src = "../static/images/moderate.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
-                        </div>
-                        {% else %}
-                        <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #FD7373; color: #BD0000;">
-                            <p>Alarm</p>
-                            <p style = "margin-left: 29vw;"><mark style = "background-color: #FD7373; font-weight: bold; color: #BD0000;">{{prediction.quality}}</mark> WQI</p>
-                            <img src = "../static/images/alarm.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
-                        </div>
-                        {% endif %}
-
-                        <p style = "margin-left: 4.5vw;">{{prediction.temperature}}°C</p>
-                        <p style = "margin-left: 12vw;">{{prediction.ph}}</p>
-                        <p style = "margin-left: 10vw;">{{prediction.turbidity}} NTU</p>
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -315,5 +278,6 @@
                 </div>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
