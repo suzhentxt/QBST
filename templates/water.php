@@ -131,15 +131,15 @@
                                 </div>
                             </div>
                             <div class="others" id="others">
-                                <div class="temperature" id = "ph">
+                                <div class="ph" id = "ph">
                                     <img src="../static/images/temperature4.png" style="width: 4vw; height: 4vw;">
                                     <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
                                 </div>
-                                <div class="wind" id = "streamflow">
+                                <div class="streamflow" id = "streamflow">
                                     <img src="../static/images/wind3.png" style="width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
                                 </div>
-                                <div class="wet" id = "tds">
+                                <div class="tds" id = "tds">
                                     <img src="../static/images/wet2.png" style="width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm</p>
                                 </div>
@@ -163,15 +163,15 @@
                                 </div>
                             </div>
                             <div class = "others" id = "others">
-                                <div class = "temperature" id = "ph">
+                                <div class = "ph" id = "ph">
                                     <img src = "../static/images/temperature5.png" style = "width: 4vw; height: 4vw;">
                                     <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
                                 </div>
-                                <div class = "wind" id = "streamflow">
+                                <div class = "streamflow" id = "streamflow">
                                     <img src = "../static/images/wind4.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
                                 </div>
-                                <div class = "wet" id = "tds">
+                                <div class = "tds" id = "tds">
                                     <img src = "../static/images/wet4.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm</p>
                                 </div>
@@ -195,15 +195,15 @@
                                 </div>
                             </div>
                             <div class = "others" id = "others">
-                                <div class = "temperature" id = "ph">
+                                <div class = "ph" id = "ph">
                                     <img src = "../static/images/temperature.png" style = "width: 4vw; height: 4vw;">
                                     <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
                                 </div>
-                                <div class = "wind" id = "streamflow">
+                                <div class = "streamflow" id = "streamflow">
                                     <img src = "../static/images/wind.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
                                 </div>
-                                <div class = "wet" id = "tds">
+                                <div class = "tds" id = "tds">
                                     <img src = "../static/images/wet3.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm </p>
                                 </div>
