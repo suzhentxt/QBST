@@ -120,7 +120,7 @@
                                     <img src="../static/images/good.png" style="width: 12vw; height: 11vw;">
                                 </div>
                                 <div class="waterquality" id="waterquality">   
-                                    <p style="font-size: 6vw; color: #3E821F; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
+                                    <p class = "wqiv" style="font-size: 6vw; color: #3E821F; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
                                     <p style="font-size: 1.3vw; color: #3E821F; margin: -0.5vw 0 0 2vw; font-weight: bold;">WQI</p>
                                 </div>
                                 <div class="quality_information" id="quality_information_good">
@@ -133,15 +133,18 @@
                             <div class="others" id="others">
                                 <div class="ph" id = "ph">
                                     <img src="../static/images/temperature4.png" style="width: 4vw; height: 4vw;">
-                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
+                                    <p class = "phv" style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span></p>
+                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.2vw"> pH</p>
                                 </div>
                                 <div class="streamflow" id = "streamflow">
                                     <img src="../static/images/wind3.png" style="width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
+                                    <p class = "streamflowv" style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span></p>
+                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;"> ml/s</p>
                                 </div>
                                 <div class="tds" id = "tds">
                                     <img src="../static/images/wet2.png" style="width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm</p>
+                                    <p class = "tdsv" style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span></p>
+                                    <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;"> ppm</p>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +156,7 @@
                                     <img src = "../static/images/moderate.png" style = "width: 12vw; height: 11vw;">
                                 </div>
                                 <div class = "waterquality" id = "waterquality">
-                                    <p style = "font-size: 6vw; color: #ff6600; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
+                                    <p class = "wqiv" style = "font-size: 6vw; color: #ff6600; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
                                     <p style = "font-size: 1.3vw; color: #ff6600; margin: -0.5vw 0 0 2vw; font-weight: bold;">WQI</p>
                                 </div>
                                 <div class = "quality_information" id = "quality_information_moderate" style="background-color: #fcb07e;">
@@ -165,15 +168,18 @@
                             <div class = "others" id = "others">
                                 <div class = "ph" id = "ph">
                                     <img src = "../static/images/temperature5.png" style = "width: 4vw; height: 4vw;">
-                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
+                                    <p class = "phv" style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span></p>
+                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw">pH</p>
                                 </div>
                                 <div class = "streamflow" id = "streamflow">
                                     <img src = "../static/images/wind4.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
+                                    <p class = "streamflowv" style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span></p>
                                     <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
                                 </div>
                                 <div class = "tds" id = "tds">
                                     <img src = "../static/images/wet4.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm</p>
+                                    <p class = "tdsv" style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span></p>
+                                    <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;">ppm</p>
                                 </div>
                             </div>
                         </div>
@@ -185,7 +191,7 @@
                                     <img src = "../static/images/alarm.png" style = "width: 12vw; height: 11vw;">
                                 </div>
                                 <div class = "waterquality" id = "waterquality">
-                                    <p style = "font-size: 6vw; color: #BD0000; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
+                                    <p class = "wqiv" style = "font-size: 6vw; color: #BD0000; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
                                     <p style = "font-size: 1.3vw; color: #BD0000; margin: -0.5vw 0 0 2vw; font-weight: bold;">WQI</p>
                                 </div>
                                 <div class = "quality_information" id = "quality_information_alarm" style="background-color: rgba(256, 132, 132, 0);">
@@ -197,15 +203,18 @@
                             <div class = "others" id = "others">
                                 <div class = "ph" id = "ph">
                                     <img src = "../static/images/temperature.png" style = "width: 4vw; height: 4vw;">
-                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span> pH </p>
+                                    <p class = "phv" style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span></p>
+                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw">pH</p>
                                 </div>
                                 <div class = "streamflow" id = "streamflow">
                                     <img src = "../static/images/wind.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
+                                    <p class = "streamflowv" style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span></p>
+                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;">ml/s</p>
                                 </div>
                                 <div class = "tds" id = "tds">
                                     <img src = "../static/images/wet3.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
-                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span> ppm </p>
+                                    <p class = "tdsv" style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span></p>
+                                    <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;">ppm</p>
                                 </div>
                             </div>
                         </div>
@@ -296,10 +305,30 @@
                     // Xử lý dữ liệu mà bạn nhận được từ API
                     console.log('Data:', data);
                     // Ví dụ: Hiển thị dữ liệu lên trang web
-                    document.getElementById('ph-value').innerHTML = data[data.length-1].ph;
-                    document.getElementById('wqi-value').innerHTML = data[data.length-1].wqi;
-                    document.getElementById('sf-value').innerHTML = data[data.length-1].streamflow;
-                    document.getElementById('tds-value').innerHTML = data[data.length-1].tds;
+                    // document.getElementById('ph-value').innerHTML = data[data.length-1].ph;
+                    // document.getElementById('wqi-value').innerHTML = data[data.length-1].wqi;
+                    // document.getElementById('sf-value').innerHTML = data[data.length-1].streamflow;
+                    // document.getElementById('tds-value').innerHTML = data[data.length-1].tds;
+                    //ph
+                    var elements = document.getElementsByClassName("phv");
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].innerHTML = data[data.length-1].ph;
+                    }
+                    //wqi
+                    var elements = document.getElementsByClassName("wqiv");
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].innerHTML = data[data.length-1].wqi;
+                    }
+                    //streamflow
+                    var elements = document.getElementsByClassName("streamflowv");
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].innerHTML = data[data.length-1].streamflow;
+                    }
+                    //tds
+                    var elements = document.getElementsByClassName("tdsv");
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].innerHTML = data[data.length-1].tds;
+                    }
 
                     // console.log('wqi: ', data[0].wqi);
 
