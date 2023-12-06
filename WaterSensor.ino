@@ -236,7 +236,7 @@ void loop() {
 
   
     Serial.println("connected");
-    Serial.print("GET QBST-main/templates/insert.php?ph=");
+    Serial.print("GET /QBST-main/templates/insert.php?ph=");
     Serial.print(PHValue);
     Serial.print("&wqi=");
     Serial.print(wqi);
@@ -246,7 +246,7 @@ void loop() {
     Serial.println(TDSValue, 0);
     
 
-    client.print("GET QBST-main/templates/insert.php?ph=");
+    client.print("GET /QBST-main/templates/insert.php?ph=");
     client.print(PHValue);
     client.print("&wqi=");
     client.print(wqi);
@@ -255,10 +255,13 @@ void loop() {
     client.print("&tds=");
     client.print(TDSValue, 0);
     
+    // client.print("GET http://192.168.1.2:3000/api/data?ph=100");
+
+
     client.print(" ");      //SPACE BEFORE HTTP/1.1
     client.print("HTTP/1.1");
     client.println();
-    client.println("Host: Ip address of computer");
+    client.println("Host: 192.168.1.2");
     client.println("Connection: close");
     client.println();
   } else {
