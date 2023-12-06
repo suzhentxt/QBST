@@ -32,13 +32,13 @@ float PHValue = 7;
 #include <Wire.h>
 #include <HTTPClient.h> 
 
-String URL = "http://192.168.1.17/QBST-main/templates/config.php";
+const char* ssid = "CTYBTC";
+const char* password = "nuongnuong";
 
-const char* wifissid = "CUONG NGA";
-const char* wifipassword = "0914388757";
+char server[] = "192.168.1.2";
 
-WiFiClient espClient;
-PubSubClient mqttclient(espClient);
+WiFiClient client;
+
 
 static unsigned long publishTimestamp = 0;
 //Global
@@ -91,9 +91,6 @@ void printTDS() {
   //Serial.print("voltage:");
   //Serial.print(TDSAverageVoltage,2);
   //Serial.print("V   ");
-  Serial.print("TDS Value:");
-  Serial.print(TDSValue, 0);
-  Serial.println("ppm");
 }
 
 void SFPulseCounter() {
@@ -107,9 +104,6 @@ void printSF() {
 
   // Because this loop may not complete in exactly 1 second intervals we calculate the number of milliseconds that have passed since the last execution and use that to scale the output. We also apply the SFCalibrationFactor to scale the output based on the number of pulses per second per units of measure (litres/minute in this case) coming from the sensor.
   SFRate = ((1000.0 / (millis() - SFPrintTimestamp)) * SFPulseCount) / SFCalibrationFactor;
-  Serial.print("Flow rate: ");
-  Serial.print(SFRate/ 60 * 1000, DEC);  // Print the integer part of the variable
-  Serial.println("mL/Second");
   SFPulseCount = 0;
 
   attachInterrupt(SFSensorPin, SFPulseCounter, FALLING);
@@ -121,17 +115,11 @@ void addPHBuffer() {
 }
 
 void printPH() {
-  Serial.print("pH: ");
   PHValue =6+ PHCoeff*getMean(PHAnalogBuffer, PHCOUNT)+PHConst;
-  Serial.println(PHValue);
 }
 
 void printWQI() {
-  Serial.print("WQI: ");
   wqi = 100 * ((abs((1.0/5.0) * ((PHValue - 7.0) / 1.5)) + (1.0/7.0) * ((TDSValue - min((float)400,TDSValue)) / 400.0))) / 0.12;
-  Serial.println(wqi);
-  Serial.print("This water is: ");
-  Serial.println((wqi <= 10) ? "Clean" : ((wqi <= 30) ? "Acceptable" : ((wqi <= 60) ? "Fair" : "Poor")));
 }
 
 void setup() {
@@ -155,25 +143,47 @@ void setup() {
 
   //Global
   pinMode(airTempPin, INPUT);
-}
 
-void connectWiFi() {
-  WiFi.mode(WIFI_OFF);
-  delay(1000);
-  //This line hides the viewing of ESP as wifi hotspot
-  WiFi.mode(WIFI_STA);
-  
-  WiFi.begin(wifissid, wifipassword);
-  Serial.println("Connecting to WiFi");
-  
+  delay(10);
+  Serial.println();
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+ 
+  WiFi.begin(ssid, password);
+ 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-    
-  Serial.print("connected to : "); Serial.println(wifissid);
-  Serial.print("IP address: "); Serial.println(WiFi.localIP());
+  Serial.println("");
+  Serial.println("WiFi connected");
+ 
+  // Start the server
+//  server.begin();
+  Serial.println("Server started");
+  Serial.println(WiFi.localIP());
+  delay(1000);
+  Serial.println("connecting...");
 }
+
+// void connectWiFi() {
+//   WiFi.mode(WIFI_OFF);
+//   delay(1000);
+//   //This line hides the viewing of ESP as wifi hotspot
+//   WiFi.mode(WIFI_STA);
+  
+//   WiFi.begin(wifissid, wifipassword);
+//   Serial.println("Connecting to WiFi");
+  
+//   while (WiFi.status() != WL_CONNECTED) {
+//     delay(500);
+//     Serial.print(".");
+//   }
+    
+//   Serial.print("connected to : "); Serial.println(wifissid);
+//   Serial.print("IP address: "); Serial.println(WiFi.localIP());
+// }
 
 // void reconnect() {
 //   // Loop until we're reconnected
@@ -201,45 +211,64 @@ void connectWiFi() {
 // }
 
 void loop() {
-  if(WiFi.status() != WL_CONNECTED) { 
-    connectWiFi();
-  }
+  if (client.connect(server, 80)) {
+    if(millis() - TDSPrintTimestamp > 1000U){
+      printTDS();
+      TDSPrintTimestamp = millis();
+    }
+    if(millis() - TDSSamplingTimestamp > 40U){     //(1) every 40 milliseconds,read the analog value from the ADC so every 800ms we get the last 30 values instead of 31
+      addTDSBuffer();
+      TDSSamplingTimestamp = millis();
+    }   
+    if(millis() - SFPrintTimestamp > 1000U){ 
+      printSF();  // Only process counters once per second
+      SFPrintTimestamp=millis();
+    }
+    if (millis() - PHPrintTimestamp > 1000U){
+      printPH();
+      PHPrintTimestamp=millis();
+      printWQI();
+    }
+    if(millis() - PHSamplingTimestamp > 40U){     //(1) every 40 milliseconds,read the analog value from the ADC so every 800ms we get the last 30 values instead of 31
+      addPHBuffer();
+      PHSamplingTimestamp = millis();
+    }   
 
-  String postData = "wqi=" + String(wqi); 
-
-  HTTPClient http; 
-  http.begin(URL);
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-
-  int httpCode = http.POST(postData); 
-  String payload = http.getString(); 
   
-  if(WiFi.status() != WL_CONNECTED) { 
-    connectWiFi();
-  }
-  
-  if(millis() - TDSPrintTimestamp > 1000U){
-    printTDS();
-    TDSPrintTimestamp = millis();
-  }
-  if(millis() - TDSSamplingTimestamp > 40U){     //(1) every 40 milliseconds,read the analog value from the ADC so every 800ms we get the last 30 values instead of 31
-    addTDSBuffer();
-    TDSSamplingTimestamp = millis();
-  }   
-  if(millis() - SFPrintTimestamp > 1000U){ 
-    printSF();  // Only process counters once per second
-    SFPrintTimestamp=millis();
-  }
-  if (millis() - PHPrintTimestamp > 1000U){
-    printPH();
-    PHPrintTimestamp=millis();
-    printWQI();
-  }
-  if(millis() - PHSamplingTimestamp > 40U){     //(1) every 40 milliseconds,read the analog value from the ADC so every 800ms we get the last 30 values instead of 31
-    addPHBuffer();
-    PHSamplingTimestamp = millis();
-  }   
-  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+    Serial.println("connected");
+    Serial.print("GET QBST-main/templates/insert.php?ph=");
+    Serial.print(PHValue);
+    Serial.print("&wqi=");
+    Serial.print(wqi);
+    Serial.print("&streamflow=");
+    Serial.print(SFRate/ 60 * 1000, DEC);
+    Serial.print("&tds=");
+    Serial.println(TDSValue, 0);
+    
 
-  delay(100);
+    client.print("GET QBST-main/templates/insert.php?ph=");
+    client.print(PHValue);
+    client.print("&wqi=");
+    client.print(wqi);
+    client.print("&streamflow=");
+    client.print(SFRate/ 60 * 1000, DEC);
+    client.print("&tds=");
+    client.print(TDSValue, 0);
+    
+    client.print(" ");      //SPACE BEFORE HTTP/1.1
+    client.print("HTTP/1.1");
+    client.println();
+    client.println("Host: Ip address of computer");
+    client.println("Connection: close");
+    client.println();
+  } else {
+    // if you didn't get a connection to the server:
+    Serial.println("connection failed");
+    delay(2000);
+  }
+  delay(5000);
+  
+  // // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+
+  // delay(100);
 }
