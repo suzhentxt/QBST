@@ -40,90 +40,28 @@ body {
 .navigation_keys .tools a {
     margin-left: 1vw;
 }
-.overlay_search {
-    background-color: rgba(0, 0, 0, 0.35);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-}
-.search_bar {
-    background-color: #fff;
-    width: 26.5vw;
-    margin: 7.5vw 0 0 68vw;
-    border-radius: 0.2vw;
-    padding: 0.6vw;
-}
-
-[placeholder]:focus::-webkit-input-placeholder {
-    transition: text-indent 0.2s 0.2s ease; 
-    text-indent: -100%;
-    opacity: 1;
- }
-.search_bar input {
-    width: 23vw;
-    border: none;
-    outline: none;
-}
-.search_result_box {
-    background-color: #fff;
-    width: 28.5vw;
-    margin: 1vw 0 0 67vw;
-    border-radius: 0.2vw;
-    padding: 0.7vw;
-}
-.search_result {
-    margin: 0 0 1.5vw 0;
-    display: flex;
-}
-.wqi_search_result {
-    margin: 0.1vw 0 0 1vw;
-    background-color: #3E4784;
-    border-radius: 0.3vw;
-    color: #fff;
-    font-size: 0.8vw;
-    padding: 0.2vw 1vw;
-}
 .content {
-    padding: 7.5vw 0 2.5vw 0;
-    box-shadow: #3E4784 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 8vw 3vw 1vw 3vw;
+    box-shadow: rgba(86, 156, 114, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
-.news_content {
-    font-family: 'Roboto Slab', serif;
-    margin: 2vw 10vw 3vw 10vw;
+.background {
+    position: relative;
+    text-align: center;
+}
+.near_location {
+    margin-top: 1vw;
     display: flex;
 }
-.news_content .headline {
-    margin-right: 1vw;
-    padding: 1vw;
-    width: 90%;
-}
-.content a {
-    text-decoration: none;
-    color: #000;
-}
-.content .name:hover {
-    color: #3E4784;
-    transition: 0.2s;
-}
-.news_content .headline_others {
-    padding: 1vw;
-    width: 35%;
-}
-.news_content .headline_others .small_article {
-    margin-bottom: 1vw;
-}
-.other_articles {
-    border-top: 0.1vw solid #cecece;
-    padding-top: 3vw;
 
-    display: flex;
-    margin: -2vw 11vw 3vw 11vw;
+.near_location .near_location_box {
+    font-family: 'Comic Neue', cursive;
+    margin: 0 1vw;
+    border-radius:15px;
+    background: #EAECF5; 
 }
-.other_articles .review_article {
-    width: 70%;
-    padding: 0.6vw 1vw 0.6vw 2vw;
+.near_location .near_location_box .near_location_box_text {
+    text-align: center;
 }
 .footer {
     display: flex;

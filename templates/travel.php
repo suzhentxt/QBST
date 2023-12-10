@@ -77,8 +77,6 @@
                     <p class = "over_background_head">“Với hệ thống IoT, thông tin về nguồn nước được cập nhật liên tục”</p>
                 </div>
 
-                <p style = "font-size: 1vw; color: #3E4784; font-weight: bold; margin: 2vw 0 0 0;">Near your location</p>
-                
                 <div class = "near_location" id = "near_location">
                     <div class = "near_location_box" id = "near_location_box">
                         <img src = "../css/images/water1_pn.png" style = "width: 21.5vw; height: 18vw; ">
@@ -124,25 +122,25 @@
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_pn.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "../css/images/water1_tl.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
-                            <p style = "font-weight: bold; font-size: 1.5vw;">Động Phong Nha</p>
+                            <p style = "font-weight: bold; font-size: 1.5vw;">Hang Tú Làn</p>
+                            <p>Minh Hóa, Quảng Bình</p>
+                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                        </div>
+                    </div>
+                    <div class = "near_location_box" id = "near_location_box">
+                        <img src = "../css/images/water1_he.png" style = "width: 21.5vw; height: 18vw; ">
+                        <div class = "near_location_box_text" id = "near_location_box_text">
+                            <p style = "font-weight: bold; font-size: 1.5vw;">Hang Én</p>
                             <p>Bố Trạch, Quảng Bình</p>
                             <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_pn.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "../css/images/water1_sd.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
-                            <p style = "font-weight: bold; font-size: 1.5vw;">Động Phong Nha</p>
-                            <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
-                        </div>
-                    </div>
-                    <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_pn.png" style = "width: 21.5vw; height: 18vw; ">
-                        <div class = "near_location_box_text" id = "near_location_box_text">
-                            <p style = "font-weight: bold; font-size: 1.5vw;">Động Phong Nha</p>
+                            <p style = "font-weight: bold; font-size: 1.5vw;">Hang Sơn Đoòng</p>
                             <p>Bố Trạch, Quảng Bình</p>
                             <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
                         </div>

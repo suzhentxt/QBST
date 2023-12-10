@@ -69,23 +69,6 @@
             </nav>
         </section>
         <section>
-            <div class = "overlay_search" id = "overlay_search">
-                <div class = "search_bar" id = "search_bar">
-                    <img src = "../css/images/search_back.png" style = "width: 1.5vw; height: 0.5w; margin-bottom: -0.15vw;" id = "search_back">
-                    <input type = "text" id = "search_content" name = "search_content" placeholder = "Enter your location..." style = "font-size: 1vw;">
-                    <i class="fa-solid fa-x fa-2xs" style="color: #000000;" id = "clear_search" onclick = "document.getElementById('search_content').value = ''"></i>
-                </div>
-                <div class = "search_result_box" id = "search_result_box">
-                    {% for watersource in watersources_data %}
-                        <div class = "search_result" id = "search_result" data_search_term="{{watersource.name}}" style="display: none;" onclick="location.href='{{url_for('detail_page', rivername=watersource.name)}}';">
-                            <img src = "../css/images/location.png" style = "width: 1vw; height: 1.3vw;">
-                            <p style = "font-size: 1vw; color: #000000; margin: 0.2vw 0 0 0.7vw; ">{{watersource.name}}</p>
-                            <p style = "font-size: 0.8vw; font-weight: bold; margin: 0.3vw 0 0 0.7vw;">{{watersource.followers}}</p>
-                            <div class = "wqi_search_result" id = "wqi_search_result">{{watersource.quality}}</div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
             <div class = "content" id = "content">
                 <div class = "news_content" id = "news_content">
                     <div class = "headline" id = "headline">
