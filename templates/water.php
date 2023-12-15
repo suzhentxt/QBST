@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <title>QBST - Nước</title>
-        <meta name = "description" content = "[Description about AquaEmi]">
+        <meta name = "description">
         <link rel = "stylesheet" href = "../css/water.css">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -222,11 +222,11 @@
                     </div>
                         <?php 
                             $servername = "localhost";
-                            $username = "root";
-                            $password = "";
-                            $database = "water";
+                            $username = "id21666431_qbstusername";
+                            $password = "******";
+                            $database = "id21666431_qbstdb";
                             
-                            $conn = mysqli_connect($servername, $username, "", $database) or die("Connection Failed");
+                            $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
                                 if(!$conn){
                                     die("Sorry we failed to connect: " .mysqli_connect_error());
                                 }
@@ -320,7 +320,7 @@
         <script>
             function loadData () {
                 // URL của API hoặc endpoint mà bạn muốn gửi request đến
-                const apiUrl = 'http://localhost/qbst/templates/server.api.php';
+                const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
 
                 // Sử dụng fetch để gửi request GET đến API
                 fetch(apiUrl)
