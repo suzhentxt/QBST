@@ -211,8 +211,8 @@
                 $sql = " SELECT * FROM mywater ORDER BY id DESC ";
                 $result = $mysqli->query($sql);
                 $mysqli->close(); -->
-                <div class = "forecast" id = "forecast">
-                    <div class = "forecast_info" id = "forecast_info">
+                <div class = "history" id = "history">
+                    <div class = "history_info" id = "history_info">
                         <p>Ngày</p>
                         <p style = "margin-left: 12vw;">Mức độ ô nhiễm</p>
                         <!-- <p style = "margin-left: 35vw;">Temperature</p> -->
@@ -252,12 +252,12 @@
                                         <!-- FETCHING DATA FROM EACH
                                             ROW OF EVERY COLUMN -->
                                       
-                                        <div class = "forecast_box" id = "forecast_box">
+                                        <div class = "history_box" id = "history_box">
                                             <p><?php echo $rows['time'];?></p>
                                             <?php
                                                 if ($rows['wqi'] <= 100) { 
                                                     echo'
-                                                    <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #A8E05F; color: #3E821F;">
+                                                    <div class = "quality_history_box" id = "quality_history_box" style="background-color: #A8E05F; color: #3E821F;">
                                                         <p>Good</p>
                                                         <p style="margin-left: 29vw;"><mark style="background-color: #A8E05F; font-weight: bold; color: #3E821F;">'.$rows['wqi'].'</mark> WQI</p>
                                                         <img src = "css/images/good2.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">    
@@ -265,7 +265,7 @@
                                                 }
                                                 elseif ($rows['wqi'] <= 200) {
                                                     echo'
-                                                    <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #F6956C; color: #ff6600;">
+                                                    <div class = "quality_history_box" id = "quality_history_box" style="background-color: #F6956C; color: #ff6600;">
                                                         <p>Moderate</p>
                                                         <p style = "margin-left: 29vw;"><mark style = "background-color: #F6956C; font-weight: bold; color: #ff6600;">'.$rows['wqi'].'</mark> WQI</p>
                                                         <img src = "css/images/moderate.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
@@ -273,7 +273,7 @@
                                                 }
                                                 else {
                                                     echo'
-                                                    <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #FD7373; color: #BD0000;">
+                                                    <div class = "quality_history_box" id = "quality_history_box" style="background-color: #FD7373; color: #BD0000;">
                                                         <p>Alarm</p>
                                                         <p style = "margin-left: 29vw;"><mark style = "background-color: #FD7373; font-weight: bold; color: #BD0000;">'.$rows['wqi'].'</mark> WQI</p>
                                                         <img src = "css/images/alarm.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
