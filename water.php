@@ -3,7 +3,7 @@
     <head>
         <title>QBST - Nước</title>
         <meta name = "description">
-        <link rel = "stylesheet" href = "../css/water.css">
+        <link rel = "stylesheet" href = "css/water.css">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
@@ -49,7 +49,7 @@
     <section class = "navigation" id = "navigation">
             <nav>
                 <div class = "navigation_bar" id = "navigation_bar">
-                    <img src="../css/images/logo.png" style = "width: 12.5vw; height: 4.5vw;" onclick="location.href='{{url_for('home_page')}}';">
+                    <img src="css/images/logo.png" style = "width: 12.5vw; height: 4.5vw;" onclick="location.href='{{url_for('home_page')}}';">
                     <div class = "navigation_keys">
                         <div class = "subjects">
                             <p><a href = "index.php" title = "Trang Chủ" style = "text-decoration: none; color: #000000;">Trang Chủ</a></p>
@@ -58,9 +58,9 @@
                             <p><a href = "news.php" title = "Tin tức" style = "text-decoration: none; color: #000000;">Tin tức</a></p>
                         </div>
                         <div class = "tools" id = "tools">
-                            <img src = "../css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
-                            <a href = "index"><img src = "../css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
-                            <a href = "profile"><img src = "../css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
+                            <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
+                            <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
+                            <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
                         </div>
                     </div>
                 </div>
@@ -70,9 +70,9 @@
         <section>
             <div class = "content" id = "content">
                 <div class = "destination" id = "destination">
-                    <img src="../css/images/location.png" style = "width: 1.3vw; height: 1.5vw; margin-top: -0.15vw">
+                    <img src="css/images/location.png" style = "width: 1.3vw; height: 1.5vw; margin-top: -0.15vw">
                     <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#3E4784"> Bố Trạch </p>
-                    <img src="../css/images/more.png" style = "width: 1vw; height: 1.3vw;">
+                    <img src="css/images/more.png" style = "width: 1vw; height: 1.3vw;">
                     <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#3E4784">Động Phong Nha</p>
                 </div>
                 <div class = "headings" id = "headings">
@@ -81,16 +81,16 @@
                     <div class = "headings_others" id = "headings_others">
                         <div class = "followers" id = "followers">
                             <p style = "font-size: 0.8vw;"><mark style = "background-color: #fff; font-weight: bold;"> 3,12N </mark> người theo dõi hang động này</p>
-                            <img src = "../css/images/people.png" style = "width: 6.5vw; height: 1.8vw; margin: 0.3vw 0 0 1vw;">
-                            <img src = "../css/images/heart2.png" style = "width: 2vw; height: 2.1vw; margin: 0.3vw 0 0 0.5vw;">
-                            <img src = "../css/images/share.png" style = "width: 2.1vw; height: 2.2vw; margin: 0.3vw 0 0 0.5vw;">
+                            <img src = "css/images/people.png" style = "width: 6.5vw; height: 1.8vw; margin: 0.3vw 0 0 1vw;">
+                            <img src = "css/images/heart2.png" style = "width: 2vw; height: 2.1vw; margin: 0.3vw 0 0 0.5vw;">
+                            <img src = "css/images/share.png" style = "width: 2.1vw; height: 2.2vw; margin: 0.3vw 0 0 0.5vw;">
                         </div>
                     </div>
                 </div>
                 <div class = "general" id = "general">
     
                     <div class = "map" id = "map">
-                        <img src = "../css/images/map2.png" style = "width: 25vw; height: 30vw; border-radius: 1vw;">
+                        <img src = "css/images/map2.png" style = "width: 25vw; height: 30vw; border-radius: 1vw;">
                         <p style = "font-size: 1.3vw; color: #fff; margin: -6vw 0 0 1vw; font-weight: bold;">Bản đồ nguồn nước Động Phong Nha</p>
                         <button class = "view_map" id = "view_map" onclick="location.href='map';">VIEW MAP</button>
                     </div>
@@ -101,7 +101,7 @@
                         <div class="information_box" id="information_box1">
                             <div class="quality_box" id="quality_box">
                                 <div class="image_quality_box" id="image_quality_box">
-                                    <img src="../css/images/good.png" style="width: 12vw; height: 11vw;">
+                                    <img src="css/images/good.png" style="width: 12vw; height: 11vw;">
                                 </div>
                                 <div class="waterquality" id="waterquality">   
                                     <p class = "wqiv" style="font-size: 6vw; color: #3E821F; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
@@ -116,17 +116,17 @@
                             </div>
                             <div class="others" id="others">
                                 <div class="ph" id = "ph">
-                                    <img src="../css/images/temperature4.png" style="width: 4vw; height: 4vw;">
+                                    <img src="css/images/temperature4.png" style="width: 4vw; height: 4vw;">
                                     <p class = "phv" style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span></p>
                                     <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.2vw"> pH</p>
                                 </div>
                                 <div class="streamflow" id = "streamflow">
-                                    <img src="../css/images/wind3.png" style="width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
+                                    <img src="css/images/wind3.png" style="width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p class = "streamflowv" style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span></p>
                                     <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.7vw;"> ml/s</p>
                                 </div>
                                 <div class="tds" id = "tds">
-                                    <img src="../css/images/wet2.png" style="width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
+                                    <img src="css/images/wet2.png" style="width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p class = "tdsv" style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span></p>
                                     <p style="font-size: 1.5vw; color: #94D53F; margin: 1.1vw 0 0 0.5vw;"> ppm</p>
                                 </div>
@@ -137,7 +137,7 @@
                         <div class = "information_box" id = "information_box2" style="border: 0.3vw solid #ff6600;">
                             <div class = "quality_box" id = "quality_box" style="background-color: #fcb07e">
                                 <div class = "image_quality_box" id = "image_quality_box" style="background-color: #F6956C;">
-                                    <img src = "../css/images/moderate.png" style = "width: 12vw; height: 11vw;">
+                                    <img src = "css/images/moderate.png" style = "width: 12vw; height: 11vw;">
                                 </div>
                                 <div class = "waterquality" id = "waterquality">
                                     <p class = "wqiv" style = "font-size: 6vw; color: #ff6600; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
@@ -151,17 +151,17 @@
                             </div>
                             <div class = "others" id = "others">
                                 <div class = "ph" id = "ph">
-                                    <img src = "../css/images/temperature5.png" style = "width: 4vw; height: 4vw;">
+                                    <img src = "css/images/temperature5.png" style = "width: 4vw; height: 4vw;">
                                     <p class = "phv" style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span></p>
                                     <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.2vw">pH</p>
                                 </div>
                                 <div class = "streamflow" id = "streamflow">
-                                    <img src = "../css/images/wind4.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
+                                    <img src = "css/images/wind4.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p class = "streamflowv" style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span></p>
                                     <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span> ml/s </p>
                                 </div>
                                 <div class = "tds" id = "tds">
-                                    <img src = "../css/images/wet4.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
+                                    <img src = "css/images/wet4.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p class = "tdsv" style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span></p>
                                     <p style = "font-size: 1.5vw; color: #ff9249; margin: 1.1vw 0 0 0.5vw;">ppm</p>
                                 </div>
@@ -172,7 +172,7 @@
                         <div class = "information_box" id = "information_box3" style="border: 0.3vw solid #BD0000;">
                             <div class = "quality_box" id = "quality_box" style="background-color: rgba(256, 132, 132, 0.65);">
                                 <div class = "image_quality_box" id = "image_quality_box" style="background-color: #FD7373;">
-                                    <img src = "../css/images/alarm.png" style = "width: 12vw; height: 11vw;">
+                                    <img src = "css/images/alarm.png" style = "width: 12vw; height: 11vw;">
                                 </div>
                                 <div class = "waterquality" id = "waterquality">
                                     <p class = "wqiv" style = "font-size: 6vw; color: #BD0000; margin: 0.5vw 0 0 0"><span id="wqi-value"></span></p>
@@ -186,17 +186,17 @@
                             </div>
                             <div class = "others" id = "others">
                                 <div class = "ph" id = "ph">
-                                    <img src = "../css/images/temperature.png" style = "width: 4vw; height: 4vw;">
+                                    <img src = "css/images/temperature.png" style = "width: 4vw; height: 4vw;">
                                     <p class = "phv" style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw"><span id="ph-value"></span></p>
                                     <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.2vw">pH</p>
                                 </div>
                                 <div class = "streamflow" id = "streamflow">
-                                    <img src = "../css/images/wind.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
+                                    <img src = "css/images/wind.png" style = "width: 3vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p class = "streamflowv" style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;"><span id="sf-value"></span></p>
                                     <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.7vw;">ml/s</p>
                                 </div>
                                 <div class = "tds" id = "tds">
-                                    <img src = "../css/images/wet3.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
+                                    <img src = "css/images/wet3.png" style = "width: 2vw; height: 3vw; margin: 0.5vw 0 0 0;">
                                     <p class = "tdsv" style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;"><span id="tds-value"></span></p>
                                     <p style = "font-size: 1.5vw; color: #F63E3E; margin: 1.1vw 0 0 0.5vw;">ppm</p>
                                 </div>
@@ -221,12 +221,17 @@
                         <p style = "margin-left: 10vw;">Tốc độ dòng chảy</p>
                     </div>
                         <?php 
+                            // $servername = "localhost";
+                            // $username = "id21666431_qbstusername";
+                            // $password = "******";
+                            // $database = "id21666431_qbstdb";
                             $servername = "localhost";
-                            $username = "id21666431_qbstusername";
-                            $password = "******";
-                            $database = "id21666431_qbstdb";
+                            $username = "root";
+                            $password = "";
+                            $database = "water";
                             
-                            $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
+                            // $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
+                            $conn = mysqli_connect($servername, $username, "", $database) or die("Connection Failed");
                                 if(!$conn){
                                     die("Sorry we failed to connect: " .mysqli_connect_error());
                                 }
@@ -255,7 +260,7 @@
                                                     <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #A8E05F; color: #3E821F;">
                                                         <p>Good</p>
                                                         <p style="margin-left: 29vw;"><mark style="background-color: #A8E05F; font-weight: bold; color: #3E821F;">'.$rows['wqi'].'</mark> WQI</p>
-                                                        <img src = "../css/images/good2.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">    
+                                                        <img src = "css/images/good2.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">    
                                                     </div>';
                                                 }
                                                 elseif ($rows['wqi'] <= 200) {
@@ -263,7 +268,7 @@
                                                     <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #F6956C; color: #ff6600;">
                                                         <p>Moderate</p>
                                                         <p style = "margin-left: 29vw;"><mark style = "background-color: #F6956C; font-weight: bold; color: #ff6600;">'.$rows['wqi'].'</mark> WQI</p>
-                                                        <img src = "../css/images/moderate.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
+                                                        <img src = "css/images/moderate.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
                                                     </div>';
                                                 }
                                                 else {
@@ -271,7 +276,7 @@
                                                     <div class = "quality_forecast_box" id = "quality_forecast_box" style="background-color: #FD7373; color: #BD0000;">
                                                         <p>Alarm</p>
                                                         <p style = "margin-left: 29vw;"><mark style = "background-color: #FD7373; font-weight: bold; color: #BD0000;">'.$rows['wqi'].'</mark> WQI</p>
-                                                        <img src = "../css/images/alarm.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
+                                                        <img src = "css/images/alarm.png" style = "width: 2vw; height: 2vw; margin: 0.6vw 0 0 1vw">
                                                     </div>';
                                                 }
                                             ?>
@@ -292,7 +297,7 @@
         
         <footer>
             <div class = "footer" id = "footer">
-                <img src="../css/images/logo.png" alt="logo" style = "width: 19vw; height: 6.5vw; margin-top: 1.3vw">
+                <img src="css/images/logo.png" alt="logo" style = "width: 19vw; height: 6.5vw; margin-top: 1.3vw">
                 <div class = "subjects_footer" id = "subjects_footer">
                     <div class = "first" id = "first">
                         <p>Trang chủ</p>
@@ -320,7 +325,8 @@
         <script>
             function loadData () {
                 // URL của API hoặc endpoint mà bạn muốn gửi request đến
-                const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
+                // const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
+                const apiUrl = 'http://localhost/qbst/server.api.php';
 
                 // Sử dụng fetch để gửi request GET đến API
                 fetch(apiUrl)

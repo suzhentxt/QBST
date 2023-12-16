@@ -8,7 +8,7 @@
         <meta content="" name="keywords">
         <meta content="" name="description">
 
-        <link rel = "stylesheet" href = "../css/travel.css">
+        <link rel = "stylesheet" href = "css/travel.css">
         <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
 
         <!-- For search bar -->
@@ -51,7 +51,7 @@
         <section class = "navigation" id = "navigation">
             <nav>
                 <div class = "navigation_bar" id = "navigation_bar">
-                    <img src="../css/images/logo.png" style = "width: 12.5vw; height: 4.5vw;" onclick="location.href='{{url_for('home_page')}}';">
+                    <img src="css/images/logo.png" style = "width: 12.5vw; height: 4.5vw;" onclick="location.href='{{url_for('home_page')}}';">
                     <div class = "navigation_keys">
                         <div class = "subjects">
                             <p><a href = "index.php" title = "Trang Chủ" style = "text-decoration: none; color: #000000;">Trang Chủ</a></p>
@@ -60,9 +60,9 @@
                             <p><a href = "news.php" title = "Tin tức" style = "text-decoration: none; color: #000000;">Tin tức</a></p>
                         </div>
                         <div class = "tools" id = "tools">
-                            <img src = "../css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
-                            <a href = "index"><img src = "../css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
-                            <a href = "profile"><img src = "../css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
+                            <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
+                            <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
+                            <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
                         </div>
                     </div>
                 </div>
@@ -72,77 +72,77 @@
             <div class = "content" id = "content">
 
                 <div class = "background" id = "background">
-                    <img src="../css/images/water1_headline.png" style = "width: 100%; height: 25vw">
+                    <img src="css/images/water1_headline.png" style = "width: 100%; height: 25vw">
                     <p class = "over_background_header">Kiểm tra nguồn nước của bạn</p>
                     <p class = "over_background_head">“Với hệ thống IoT, thông tin về nguồn nước được cập nhật liên tục”</p>
                 </div>
 
                 <div class = "near_location" id = "near_location">
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_pn.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_pn.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Động Phong Nha</p>
                             <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "water.php" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_ts.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_ts.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Động Tiên Sơn</p>
                             <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_td.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_td.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Động Thiên Đường</p>
                             <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_ht.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_ht.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Hang Tối</p>
                             <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                 </div>
 
                 <div class = "near_location" id = "near_location">
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_tc.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_tc.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Hang Thuỷ Cung</p>
                             <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_tl.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_tl.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Hang Tú Làn</p>
                             <p>Minh Hóa, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_he.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_he.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Hang Én</p>
                             <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                     <div class = "near_location_box" id = "near_location_box">
-                        <img src = "../css/images/water1_sd.png" style = "width: 21.5vw; height: 18vw; ">
+                        <img src = "css/images/water1_sd.png" style = "width: 21.5vw; height: 18vw; ">
                         <div class = "near_location_box_text" id = "near_location_box_text">
                             <p style = "font-weight: bold; font-size: 1.5vw;">Hang Sơn Đoòng</p>
                             <p>Bố Trạch, Quảng Bình</p>
-                            <u style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</u>
+                            <u><a href = "" style = "font-size: 1vw; color: #000; font-weight: bold;">Xem chi tiết →</a></u>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
         </section>
         <footer>
             <div class = "footer" id = "footer">
-                <img src="../css/images/logo.png" alt="logo" style = "width: 19vw; height: 6.5vw; margin-top: 1.3vw">
+                <img src="css/images/logo.png" alt="logo" style = "width: 19vw; height: 6.5vw; margin-top: 1.3vw">
                 <div class = "subjects_footer" id = "subjects_footer">
                     <div class = "first" id = "first">
                         <p>Trang chủ</p>
