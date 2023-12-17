@@ -35,7 +35,7 @@ float PHValue = 7;
 const char* ssid = "CTYBTC";
 const char* password = "nuongnuong";
 
-char server[] = "192.168.1.2";
+char server[] = "qbst.000webhostapp.com/";
 
 WiFiClient client;
 
@@ -204,9 +204,9 @@ void setup() {
 
 // void publishMQTT(){
 //   mqttclient.publish("test/ph",String(PHValue,3).c_str());
-//   // mqttclient.publish("aquaemiIOT/wqi", String(wqi,3).c_str());
-//   // mqttclient.publish("aquaemiIOT/streamflow", String(SFRate,3).c_str());
-//   // mqttclient.publish("aquaemiIOT/TDS", String(TDSValue,3).c_str());
+//   // mqttclient.publish("IOT/wqi", String(wqi,3).c_str());
+//   // mqttclient.publish("IOT/streamflow", String(SFRate,3).c_str());
+//   // mqttclient.publish("IOT/TDS", String(TDSValue,3).c_str());
 //   // Serial.println("Message sent");
 // }
 
@@ -236,7 +236,7 @@ void loop() {
 
   
     Serial.println("connected");
-    Serial.print("GET /QBST-main/templates/insert.php?ph=");
+    Serial.print("GET /insert.php?ph=");
     Serial.print(PHValue);
     Serial.print("&wqi=");
     Serial.print(wqi);
@@ -246,7 +246,7 @@ void loop() {
     Serial.println(TDSValue, 0);
     
 
-    client.print("GET /QBST-main/templates/insert.php?ph=");
+    client.print("GET /insert.php?ph=");
     client.print(PHValue);
     client.print("&wqi=");
     client.print(wqi);
@@ -255,13 +255,13 @@ void loop() {
     client.print("&tds=");
     client.print(TDSValue, 0);
     
-    // client.print("GET http://192.168.1.2:3000/api/data?ph=100");
+    // client.print("GET qbst.000webhostapp.com/:3000/api/data?ph=100");
 
 
     client.print(" ");      //SPACE BEFORE HTTP/1.1
     client.print("HTTP/1.1");
     client.println();
-    client.println("Host: 192.168.1.2");
+    client.println("Host: qbst.000webhostapp.com/");
     client.println("Connection: close");
     client.println();
   } else {
