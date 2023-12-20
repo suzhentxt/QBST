@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 body {
     background-color: #ffffff;
-    margin: 0;
+    margin: auto;
     font-family: 'Comic Neue', cursive;
 }
 
+/* navbar */
 .navigation {
     position: fixed;
     width: 100%;
@@ -19,36 +23,64 @@ body {
     padding: 0.1vw;
     display: flex;
 }
+.navigation_bar img {
+    width: 30%;
+    margin-left: 30px;
+}
+
 .navigation_keys {
     margin: 2.5vw;
+    margin-left: 0px;
     display: flex;
     position: absolute;
     right: 0;
+    text-align: left;;
 }
 .navigation_keys .subjects {
     display: flex;
     margin: -2.3vw 12vw;
+    margin-left: 0px;
+    float: left;
 }
 .navigation_keys .subjects p {
+    font-family: 'Inter', sans-serif;
     font-size: 1.3vw;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0 2vw;
+    margin-left: 0px;
 }
+
+.navigation_keys .subjects #current {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 .navigation_keys .tools {
     margin: -1.5vw -0.5vw 0.5vw 3vw;
 }
 .navigation_keys .tools a {
     margin-left: 1vw;
 }
+/* navbar */
+
+/* content */
 .content {
-    font-family: 'Noto Sans', sans-serif;
-    padding: 8vw 3vw 1vw 3vw;
-    box-shadow: rgba(86, 156, 114, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    display: block;
+    width: 1440px;
 }
+
 .background {
+    display: block;
+    padding-top: 100px;
     position: relative;
-    text-align: center;
 }
+
+.background #img1, #img2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .near_location {
     margin-top: 1vw;
     display: flex;
@@ -63,25 +95,30 @@ body {
 .near_location .near_location_box .near_location_box_text {
     text-align: center;
 }
+
+/* footer */
 .footer {
     display: flex;
+    background-color: #EAECF5;
+    font-family: 'Inter', sans-serif;
     padding: 1vw 5vw;
     border-top: 0.2vw solid #3E4784;
 }
 .subjects_footer {
+    margin-left: 200px;
+    margin-right: 150px;
     padding-top: 1vw;
     display: flex;
+    font-size: 1.5vw;
 }
 .subjects_footer .first {
     padding: 0.3vw 5vw ;
-    font-size: 1.2vw;
 }
 .footer .second {
     padding: 0.3vw 5vw ;
-    font-size: 1.2vw;
 }
 .footer .third {
-    padding: 0.3vw 5vw ;
+    padding: 0.3vw 5vw;
     font-size: 1.2vw;
 }
 .mailing_list {
@@ -100,3 +137,4 @@ body {
 .mailing_list .social_media {
     margin-top: 1vw;
 }
+/* footer */
