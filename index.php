@@ -49,40 +49,40 @@
     </head>
     <body>
         <section class = "navigation" id = "navigation">
-            <nav>
-                <div class = "navigation_bar" id = "navigation_bar">
-                    <img src="css/images/logo.png" style = "width: 12.5vw; height: 4.5vw;" onclick="location.href='{{url_for('home_page')}}';">
-                    <div class = "navigation_keys">
-                        <div class = "subjects">
-                            <p><a href = "index.php" title = "Trang Chủ" style = "text-decoration: none; color: #000000;">Trang Chủ</a></p>
-                            <p><a href = "water.php" title = "Nước" style = "text-decoration: none; color: #000000;">Nước</a></p>
-                            <p><a href = "travel.php" title = "Du lịch" style = "text-decoration: none; color: #000000;">Du lịch</a></p>
-                            <p><a href = "news.php" title = "Tin tức" style = "text-decoration: none; color: #000000;"><u>Tin tức</u></a></p>
-                        </div>
-                        <div class = "tools" id = "tools">
-                            <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
-                            <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
-                            <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
+                <nav>
+                    <div class = "navigation_bar" id = "navigation_bar">
+                        <img src="css/images/logo.png" onclick="location.href='{{url_for('home_page')}}';">
+                        <div class = "navigation_keys">
+                            <div class = "subjects">
+                                <p id="current"><a href = "index.php" title = "Trang Chủ" style = "text-decoration: none; color: #000000;">Trang Chủ</a></p>
+                                <p><a href = "water.php" title = "Nước" style = "text-decoration: none; color: #000000;">Nước</a></p>
+                                <p><a href = "travel.php" title = "Du lịch" style = "text-decoration: none; color: #000000;">Du lịch</a></p>
+                                <p><a href = "news.php" title = "Tin tức" style = "text-decoration: none; color: #000000;">Tin tức</a></p>
+                            </div>
+                            <div class = "tools" id = "tools">
+                                <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
+                                <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
+                                <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
+                            </div>
                         </div>
                     </div>
+                </nav>
+            </section>
+            <section>
+                <div class = "content" id = "content">
+                    <div class = "background" id = "background">
+                        <img src="css/images/homepage.png" style = "width: 100%">
+                        <p class = "">Bảo vệ thiên nhiên - Du lịch bền vững</p>
+                        <p class = "">Biết được những gì đang xảy ra và ở đâu là chìa khoá để hiểu về môi trường sống của chúng ta và hành động</p>
+                        <p class = "">Tìm hiểu thêm →</p>
+                        <img id="img2" src="css/images/homepage3.png">
+                        <img id="img1" src="css/images/homepage2.png">
+                    </div>
                 </div>
-            </nav>
-        </section>
-        <section>
-            <div class = "content" id = "content">
-                <div class = "background" id = "background">
-                    <img src="css/images/homepage.png" style = "width: 100%">
-                    <p class = "">Bảo vệ thiên nhiên - Du lịch bền vững</p>
-                    <p class = "">Biết được những gì đang xảy ra và ở đâu là chìa khoá để hiểu về môi trường sống của chúng ta và hành động</p>
-                    <p class = "">Tìm hiểu thêm →</p>
-                    <img src="css/images/homepage2.png">
-                    <img src="css/images/homepage3.png">
-                </div>
-            </div>
-        </section>
-        <footer>
+            </section>
+            <footer>
             <div class = "footer" id = "footer">
-                <img src="css/images/logo.png" alt="logo" style = "width: 19vw; height: 6.5vw; margin-top: 1.3vw">
+                <img src="css/images/logo.png" alt="logo" style = "width: 10vw; margin-top: 1.3vw">
                 <div class = "subjects_footer" id = "subjects_footer">
                     <div class = "first" id = "first">
                         <p>Trang chủ</p>

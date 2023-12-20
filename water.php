@@ -49,11 +49,11 @@
     <section class = "navigation" id = "navigation">
             <nav>
                 <div class = "navigation_bar" id = "navigation_bar">
-                    <img src="css/images/logo.png" style = "width: 12.5vw; height: 4.5vw;" onclick="location.href='{{url_for('home_page')}}';">
+                    <img src="css/images/logo.png" onclick="location.href='{{url_for('home_page')}}';">
                     <div class = "navigation_keys">
                         <div class = "subjects">
                             <p><a href = "index.php" title = "Trang Chủ" style = "text-decoration: none; color: #000000;">Trang Chủ</a></p>
-                            <p><a href = "water.php" title = "Nước" style = "text-decoration: none; color: #000000;"><u>Nước</u></a></p>
+                            <p id="current"><a href = "water.php" title = "Nước" style = "color: #000000;">Nước</a></p>
                             <p><a href = "travel.php" title = "Du lịch" style = "text-decoration: none; color: #000000;">Du lịch</a></p>
                             <p><a href = "news.php" title = "Tin tức" style = "text-decoration: none; color: #000000;">Tin tức</a></p>
                         </div>
@@ -71,9 +71,9 @@
             <div class = "content" id = "content">
                 <div class = "destination" id = "destination">
                     <img src="css/images/location.png" style = "width: 1.3vw; height: 1.5vw; margin-top: -0.15vw">
-                    <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#3E4784"> Bố Trạch </p>
+                    <p style = "margin: 0 0.5vw 0 0.7vw; color:#3E4784"> Bố Trạch </p>
                     <img src="css/images/more.png" style = "width: 1vw; height: 1.3vw;">
-                    <p style = "margin: 0 0.5vw 0 0.7vw; font-weight: bold; color:#3E4784">Động Phong Nha</p>
+                    <p style = "margin: 0 0.5vw 0 0.7vw; color:#3E4784">Động Phong Nha</p>
                 </div>
                 <div class = "headings" id = "headings">
                     <p style = "font-size: 2.5vw; font-weight: bold;">Chất lượng nước của Động Phong Nha</p>
@@ -297,7 +297,7 @@
         
         <footer>
             <div class = "footer" id = "footer">
-                <img src="css/images/logo.png" alt="logo" style = "width: 19vw; height: 6.5vw; margin-top: 1.3vw">
+                <img src="css/images/logo.png" alt="logo" style = "width: 10vw; margin-top: 1.3vw">
                 <div class = "subjects_footer" id = "subjects_footer">
                     <div class = "first" id = "first">
                         <p>Trang chủ</p>
@@ -326,7 +326,7 @@
             function loadData () {
                 // URL của API hoặc endpoint mà bạn muốn gửi request đến
                 // const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
-                const apiUrl = 'http://localhost/qbst/server.api.php';
+                const apiUrl = 'http://localhost/QBST-main/server.api.php';
 
                 // Sử dụng fetch để gửi request GET đến API
                 fetch(apiUrl)
