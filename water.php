@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </nav>
-        </section>
+    </section>
 
         <section>
             <div class = "content" id = "content">
@@ -221,22 +221,22 @@
                         <p style = "margin-left: 10vw;">Tốc độ dòng chảy</p>
                     </div>
                         <?php 
-                            // $servername = "localhost";
-                            // $username = "id21666431_qbstusername";
-                            // $password = "******";
-                            // $database = "id21666431_qbstdb";
                             $servername = "localhost";
-                            $username = "root";
-                            $password = "";
-                            $database = "water";
+                            $username = "id21666431_qbstusername";
+                            $password = "***";
+                            $database = "id21666431_qbstdb";
+                            // $servername = "localhost";
+                            // $username = "root";
+                            // $password = "";
+                            // $database = "water";
                             
                             // $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
-                            $conn = mysqli_connect($servername, $username, "", $database) or die("Connection Failed");
+                            $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
                                 if(!$conn){
                                     die("Sorry we failed to connect: " .mysqli_connect_error());
                                 }
                             // Assuming you have a database connection stored in $conn
-                            $query = "SELECT * FROM mywater";
+                            $query = "SELECT * FROM mywater ORDER BY time DESC";  // DESC for descending order (latest to oldest)
                             $result = $conn->query($query);
 
                             // Check if the query was successful
@@ -253,7 +253,11 @@
                                             ROW OF EVERY COLUMN -->
                                       
                                         <div class = "history_box" id = "history_box">
-                                            <p><?php echo $rows['time'];?></p>
+                                            <?php
+                                                $originalTime = DateTime::createFromFormat('Y-m-d H:i:s', $rows['time']);
+                                                $originalTime->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'));
+                                            ?>
+                                            <p><?php echo $originalTime->format('d/m/y H:i:s'); ?></p>
                                             <?php
                                                 if ($rows['wqi'] <= 100) { 
                                                     echo'
@@ -325,8 +329,8 @@
         <script>
             function loadData () {
                 // URL của API hoặc endpoint mà bạn muốn gửi request đến
-                // const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
-                const apiUrl = 'http://localhost/QBST-main/server.api.php';
+                const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
+                // const apiUrl = 'http://localhost/QBST-main/server.api.php';
 
                 // Sử dụng fetch để gửi request GET đến API
                 fetch(apiUrl)
