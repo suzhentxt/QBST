@@ -2,14 +2,31 @@
 <html lang = "en">
     <head>
         <title>QBST - Nước</title>
-        <meta name = "description">
-        <link rel = "stylesheet" href = "css/water.css">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <!-- <script src="script.js"></script> -->
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/water.css" rel="stylesheet">
 
         <script>
             $(document).ready(function() {
@@ -42,30 +59,31 @@
                 });
             });
         </script>
-
     </head>
+
     <body>
 
-    <section class = "navigation" id = "navigation">
-            <nav>
-                <div class = "navigation_bar" id = "navigation_bar">
-                    <img src="css/images/logo.png" onclick="location.href='{{url_for('home_page')}}';">
-                    <div class = "navigation_keys">
-                        <div class = "subjects">
-                            <p><a href = "index.php" title = "Trang Chủ" style = "text-decoration: none; color: #000000;">Trang Chủ</a></p>
-                            <p id="current"><a href = "water.php" title = "Nước" style = "color: #000000;">Nước</a></p>
-                            <p><a href = "travel.php" title = "Du lịch" style = "text-decoration: none; color: #000000;">Du lịch</a></p>
-                            <p><a href = "news.php" title = "Tin tức" style = "text-decoration: none; color: #000000;">Tin tức</a></p>
-                        </div>
-                        <div class = "tools" id = "tools">
-                            <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
-                            <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
-                            <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
-                        </div>
-                    </div>
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <img class="d-inline-block align-top" src="css/images/logo.png" width="30%" alt="">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav p-4 p-lg-0">
+                    <a href="index.php" class="nav-item nav-link" style="color: #000000;">Trang chủ</a>
+                    <a href="travel.php" class="nav-item nav-link" style="color: #000000;">Du lịch</a>
+                    <a href="water.php" class="nav-item nav-link active" style="color: #000000; font-weight: bold;"><u>Nước</u></a>
+                    <a href="news.php" class="nav-item nav-link" style="color: #000000;">Tin tức</a>
                 </div>
-            </nav>
-    </section>
+            </div>
+            <!-- <div class = "tools" id = "tools">
+                <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
+                <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
+                <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
+            </div> -->
+        </nav>
 
         <section>
             <div class = "content" id = "content">
@@ -76,8 +94,8 @@
                     <p style = "margin: 0 0.5vw 0 0.7vw; color:#3E4784">Động Phong Nha</p>
                 </div>
                 <div class = "headings" id = "headings">
-                    <p style = "font-size: 2.5vw; font-weight: bold;">Chất lượng nước của Động Phong Nha</p>
-                    <p style = "font-size: 1vw; margin-top: -2.2vw;">Water Quality Index (WQI) ở Động Phong Nha, Bố Trạch, Quảng Bình</p>
+                    <p style = "font-size: 2.5vw; font-weight: bold; color: #000">Chất lượng nước của Động Phong Nha</p>
+                    <p style = "font-size: 1vw; margin-top: 1.2vw; color: #000">Water Quality Index (WQI) ở Động Phong Nha, Bố Trạch, Quảng Bình</p>
                     <div class = "headings_others" id = "headings_others">
                         <div class = "followers" id = "followers">
                             <p style = "font-size: 0.8vw;"><mark style = "background-color: #fff; font-weight: bold;"> 3,12N </mark> người theo dõi hang động này</p>
@@ -214,11 +232,11 @@
                 <div class = "history" id = "history">
                     <div class = "history_info" id = "history_info">
                         <p>Ngày</p>
-                        <p style = "margin-left: 12vw;">Mức độ ô nhiễm</p>
+                        <p style = "margin-left: 12vw; color: #000">Mức độ ô nhiễm</p>
                         <!-- <p style = "margin-left: 35vw;">Temperature</p> -->
-                        <p style = "margin-left: 10vw;">pH</p>
-                        <p style = "margin-left: 10vw;">Tổng chất rắn hòa tan</p>
-                        <p style = "margin-left: 10vw;">Tốc độ dòng chảy</p>
+                        <p style = "margin-left: 10vw; color: #000">pH</p>
+                        <p style = "margin-left: 10vw; color: #000">Tổng chất rắn hòa tan</p>
+                        <p style = "margin-left: 10vw; color: #000">Tốc độ dòng chảy</p>
                     </div>
                         <?php 
                             $servername = "localhost";
@@ -285,9 +303,9 @@
                                                 }
                                             ?>
                                             <!-- <p style = "margin-left: 4.5vw;">{{prediction.temperature}}°C</p> -->
-                                            <p style = "margin-left: 12vw;"><?php echo $rows['ph'];?></p>
-                                            <p style = "margin-left: 10vw;"><?php echo $rows['tds'];?></p>
-                                            <p style = "margin-left: 10vw;"><?php echo $rows['streamflow'];?></p>
+                                            <p style = "margin-left: 12vw; color: #000"><?php echo $rows['ph'];?></p>
+                                            <p style = "margin-left: 10vw; color: #000"><?php echo $rows['tds'];?></p>
+                                            <p style = "margin-left: 10vw; color: #000"><?php echo $rows['streamflow'];?></p>
                                         </div> 
 
                                     </tr>
@@ -399,5 +417,15 @@
                 loadData();
             }, 5000);
         </script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="main.js"></script>
     </body>
 </html>

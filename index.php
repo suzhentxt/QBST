@@ -8,12 +8,25 @@
         <meta content="" name="keywords">
         <meta content="" name="description">
 
-        <link rel = "stylesheet" href = "css/index.css">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
 
-        <!-- For search bar -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/index.css" rel="stylesheet">
 
         <script>
             $(document).ready(function() {
@@ -47,42 +60,42 @@
             });
         </script>
     </head>
+
     <body>
-        <section class = "navigation" id = "navigation">
-                <nav>
-                    <div class = "navigation_bar" id = "navigation_bar">
-                        <img src="css/images/logo.png" onclick="location.href='{{url_for('home_page')}}';">
-                        <div class = "navigation_keys">
-                            <div class = "subjects">
-                                <p id="current"><a href = "index.php" title = "Trang Chủ" style = "text-decoration: none; color: #000000;">Trang Chủ</a></p>
-                                <p><a href = "water.php" title = "Nước" style = "text-decoration: none; color: #000000;">Nước</a></p>
-                                <p><a href = "travel.php" title = "Du lịch" style = "text-decoration: none; color: #000000;">Du lịch</a></p>
-                                <p><a href = "news.php" title = "Tin tức" style = "text-decoration: none; color: #000000;">Tin tức</a></p>
-                            </div>
-                            <div class = "tools" id = "tools">
-                                <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
-                                <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
-                                <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </section>
-            <section>
-                <div class = "content" id = "content">
-                    <div class = "background" id = "background">
-                        <img src="css/images/homepage.png" style = "width: 100%">
-                        <p class = "">Bảo vệ thiên nhiên - Du lịch bền vững</p>
-                        <p class = "">Biết được những gì đang xảy ra và ở đâu là chìa khoá để hiểu về môi trường sống của chúng ta và hành động</p>
-                        <p class = "">Tìm hiểu thêm →</p>
-                        <img id="img2" src="css/images/homepage3.png">
-                        <img id="img1" src="css/images/homepage2.png">
-                    </div>
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <img class="d-inline-block align-top" src="css/images/logo.png" width="30%" alt="">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav p-4 p-lg-0">
+                    <a href="index.php" class="nav-item nav-link active" style="color: #000000; font-weight: bold;"><u>Trang chủ</u></a>
+                    <a href="travel.php" class="nav-item nav-link" style="color: #000000;">Du lịch</a>
+                    <a href="water.php" class="nav-item nav-link" style="color: #000000;">Nước</a>
+                    <a href="news.php" class="nav-item nav-link" style="color: #000000;">Tin tức</a>
                 </div>
-            </section>
-            <footer>
+            </div>
+            <!-- <div class = "tools" id = "tools">
+                <img src = "css/images/search.png" alt="search icon" style = "width: 2vw" id = "search_engine"></a>
+                <a href = "index"><img src = "css/images/notifications.png" alt="notifications icon" style = "width: 1.75vw"></a>
+                <a href = "profile"><img src = "css/images/profile.png" alt="profile icon" style = "width: 1.7vw;"></a>
+            </div> -->
+        </nav>
+        
+        <div class="main-content">
+            <div class="header-content text-center">
+                <h1 class="display-4">Bảo vệ thiên nhiên - Du lịch bền vững</h1>
+                <p class="lead">Biết được những gì đang xảy ra và ở đâu là chìa khoá để hiểu về môi trường sống của chúng ta và hành động</p>
+                <p href="water.php" >Tìm hiểu thêm →</p>
+                <img src="css/images/pic1.jpg" alt="Ảnh Quảng Bình" class="img-fluid">
+            </div>
+        </div>
+       
+        <footer>
             <div class = "footer" id = "footer">
-                <img src="css/images/logo.png" alt="logo" style = "width: 10vw; margin-top: 1.3vw">
+            <img src="css/images/logo.png" alt="logo" style = "width: 10vw; margin-top: 1.3vw">
                 <div class = "subjects_footer" id = "subjects_footer">
                     <div class = "first" id = "first">
                         <p>Trang chủ</p>
@@ -106,5 +119,15 @@
                 </div>
             </div>
         </footer>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="main.js"></script>
     </body>
 </html>
