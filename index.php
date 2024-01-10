@@ -71,10 +71,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav p-4 p-lg-0">
-                    <a href="index.php" class="nav-item nav-link active" style="color: #000000; font-weight: bold;"><u>Trang chủ</u></a>
-                    <a href="travel.php" class="nav-item nav-link" style="color: #000000;">Du lịch</a>
-                    <a href="water.php" class="nav-item nav-link" style="color: #000000;">Nước</a>
-                    <a href="news.php" class="nav-item nav-link" style="color: #000000;">Tin tức</a>
+                    <a href="index.php" class="nav-item nav-link active"><u>Trang chủ</u></a>
+                    <a href="travel.php" class="nav-item nav-link">Du lịch</a>
+                    <a href="water.php" class="nav-item nav-link">Nước</a>
+                    <a href="news.php" class="nav-item nav-link">Tin tức</a>
                 </div>
             </div>
             <!-- <div class = "tools" id = "tools">

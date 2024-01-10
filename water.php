@@ -72,10 +72,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav p-4 p-lg-0">
-                    <a href="index.php" class="nav-item nav-link" style="color: #000000;">Trang chủ</a>
-                    <a href="travel.php" class="nav-item nav-link" style="color: #000000;">Du lịch</a>
-                    <a href="water.php" class="nav-item nav-link active" style="color: #000000; font-weight: bold;"><u>Nước</u></a>
-                    <a href="news.php" class="nav-item nav-link" style="color: #000000;">Tin tức</a>
+                    <a href="index.php" class="nav-item nav-link">Trang chủ</a>
+                    <a href="travel.php" class="nav-item nav-link">Du lịch</a>
+                    <a href="water.php" class="nav-item nav-link active"><u>Nước</u></a>
+                    <a href="news.php" class="nav-item nav-link">Tin tức</a>
                 </div>
             </div>
             <!-- <div class = "tools" id = "tools">
@@ -239,17 +239,17 @@
                         <p style = "margin-left: 10vw; color: #000">Tốc độ dòng chảy</p>
                     </div>
                         <?php 
-                            $servername = "localhost";
-                            $username = "id21666431_qbstusername";
-                            $password = "***";
-                            $database = "id21666431_qbstdb";
                             // $servername = "localhost";
-                            // $username = "root";
-                            // $password = "";
-                            // $database = "water";
+                            // $username = "id21666431_qbstusername";
+                            // $password = "***";
+                            // $database = "id21666431_qbstdb";
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $database = "water";
                             
-                            // $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
                             $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
+                            // $conn = mysqli_connect($servername, $username, $password, $database) or die("Connection Failed");
                                 if(!$conn){
                                     die("Sorry we failed to connect: " .mysqli_connect_error());
                                 }
@@ -347,8 +347,8 @@
         <script>
             function loadData () {
                 // URL của API hoặc endpoint mà bạn muốn gửi request đến
-                const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
-                // const apiUrl = 'http://localhost/QBST-main/server.api.php';
+                // const apiUrl = 'https://qbst.000webhostapp.com/server.api.php';
+                const apiUrl = 'http://localhost/QBST/server.api.php';
 
                 // Sử dụng fetch để gửi request GET đến API
                 fetch(apiUrl)
